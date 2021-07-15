@@ -4,7 +4,7 @@
 [![](https://img.shields.io/npm/v/stimulus-dropdown.svg)](https://www.npmjs.com/package/stimulus-dropdown)
 [![](https://github.com/stimulus-components/stimulus-dropdown/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-dropdown)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-dropdown.svg)](https://github.com/stimulus-components/stimulus-dropdown)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/59cfd74d-6f17-4a80-b55c-535c901ad4e9/deploy-status)](https://stimulus-dropdown.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e6e1b1d2-f834-44c5-a12a-c848f6d4cd5e/deploy-status)](https://stimulus-dropdown.netlify.com)
 
 ## Getting started
 
