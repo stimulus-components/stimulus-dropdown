@@ -1,0 +1,45 @@
+{
+  "name": "stimulus-dropdown",
+  "version": "1.0.0",
+  "description": "A Stimulus controller to create a dropdown.",
+  "keywords": [
+    "stimulus",
+    "stimulusjs",
+    "stimulus controller",
+    "dropdown"
+  ],
+  "repository": "git@github.com:stimulus-components/stimulus-dropdown.git",
+  "bugs": {
+    "url": "https://github.com/stimulus-components/stimulus-dropdown/issues"
+  },
+  "author": "Guillaume Briday <guillaumebriday@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/stimulus-components/stimulus-dropdown",
+  "private": false,
+  "main": "dist/stimulus-dropdown.umd.js",
+  "module": "dist/stimulus-dropdown.es.js",
+  "scripts": {
+    "format": "prettier-standard  '**/*.{ts,css,html}' --format",
+    "lint": "prettier-standard  '**/*.{ts,css,html}' --lint",
+    "dev": "vite",
+    "prod": "vite build --config /dev/null",
+    "build": "tsc --noEmit && vite build",
+    "version": "yarn build",
+    "np": "np --no-2fa --no-tests"
+  },
+  "dependencies": {
+    "stimulus-use": "^0.25.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-typescript": "^7.13.0",
+    "np": "^7.5.0",
+    "prettier-standard": "16.4.1",
+    "stimulus": "^2.0.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.4"
+  },
+  "peerDependencies": {
+    "stimulus": "^2.0.0"
+  }
+}
