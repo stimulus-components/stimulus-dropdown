@@ -1,6 +1,6 @@
 {
   "name": "stimulus-dropdown",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A Stimulus controller to create a dropdown.",
   "keywords": [
     "stimulus",
