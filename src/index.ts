@@ -1,4 +1,4 @@
-import { Controller } from 'stimulus'
+import { Controller } from '@hotwired/stimulus'
 import { useTransition } from 'stimulus-use/dist/use-transition'
 
 export default class extends Controller {
