@@ -22,24 +22,24 @@
     "format": "prettier-standard  '**/*.{ts,css,html}' --format",
     "lint": "prettier-standard  '**/*.{ts,css,html}' --lint",
     "dev": "vite",
-    "prod": "vite build --config /dev/null",
+    "prod": "vite build --mode netlify",
     "build": "tsc --noEmit && vite build",
     "version": "yarn build",
     "np": "np --no-2fa --no-tests"
   },
   "dependencies": {
-    "stimulus-use": "^0.25.3"
+    "stimulus-use": "^0.50.0-2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.0",
-    "@babel/preset-typescript": "^7.13.0",
-    "np": "^7.5.0",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@hotwired/stimulus": "^3.0.1",
+    "np": "^7.6.0",
     "prettier-standard": "16.4.1",
-    "stimulus": "^2.0.0",
-    "typescript": "^4.2.4",
-    "vite": "^2.2.4"
+    "typescript": "^4.5.4",
+    "vite": "^2.7.10"
   },
   "peerDependencies": {
-    "stimulus": "^2.0.0"
+    "@hotwired/stimulus": "^3.0.0"
   }
 }

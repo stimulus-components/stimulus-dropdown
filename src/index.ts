@@ -1,5 +1,5 @@
-import { Controller } from 'stimulus'
-import { useTransition } from 'stimulus-use/dist/use-transition'
+import { Controller } from '@hotwired/stimulus'
+import { useTransition } from 'stimulus-use'
 
 export default class extends Controller {
   menuTarget: HTMLElement
