@@ -17,7 +17,7 @@
   "homepage": "https://github.com/stimulus-components/stimulus-dropdown",
   "private": false,
   "main": "dist/stimulus-dropdown.umd.js",
-  "module": "dist/stimulus-dropdown.es.js",
+  "module": "dist/stimulus-dropdown.mjs",
   "scripts": {
     "format": "prettier-standard  '**/*.{ts,css,html}' --format",
     "lint": "prettier-standard  '**/*.{ts,css,html}' --lint",
@@ -28,16 +28,19 @@
     "np": "np --no-2fa --no-tests"
   },
   "dependencies": {
-    "stimulus-use": "^0.50.0-2"
+    "stimulus-use": "^0.51.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
-    "@babel/preset-typescript": "^7.16.7",
-    "@hotwired/stimulus": "^3.0.1",
-    "np": "^7.6.0",
+    "@babel/core": "^7.20.7",
+    "@babel/preset-typescript": "^7.18.6",
+    "@hotwired/stimulus": "^3.2.1",
+    "autoprefixer": "^10.4.13",
+    "np": "^7.6.2",
+    "postcss": "^8.4.20",
     "prettier-standard": "16.4.1",
-    "typescript": "^4.5.4",
-    "vite": "^2.7.10"
+    "tailwindcss": "^3.2.4",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.3"
   },
   "peerDependencies": {
     "@hotwired/stimulus": "^3.0.0"
