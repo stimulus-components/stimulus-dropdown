@@ -22,15 +22,21 @@ export default class extends Controller {
     target: HTMLInputElement
   }): void {
     this.toggleTransition()
-    this.updateMenuPosition(target.offsetHeight)
+    this.updateMenuPosition(target)
   }
 
-  updateMenuPosition (menuOffsetHeight: number): void {
+  updateMenuPosition (target: HTMLInputElement): void {
     const menuRect = this.menuTarget.getBoundingClientRect()
+    const buttonRect = target.getBoundingClientRect()
 
     if(!this.menuTarget.classList.contains('enter-active')) return;
 
-    this.hang(menuRect, menuOffsetHeight)
+    if (buttonRect.right <= menuRect.width) {
+      this.hangLeft();
+      return;
+    };
+
+    this.hang(menuRect, target.offsetHeight)
   }
 
   hang (menuRect: DOMRect, menuOffsetHeight: number): void {
