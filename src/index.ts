@@ -11,7 +11,8 @@ export default class extends Controller {
 
   connect (): void {
     useTransition(this, {
-      element: this.menuTarget
+      element: this.menuTarget,
+      enterActive: 'enter-active',
     })
   }
 
@@ -27,6 +28,12 @@ export default class extends Controller {
   updateMenuPosition (menuOffsetHeight: number): void {
     const menuRect = this.menuTarget.getBoundingClientRect()
 
+    if(!this.menuTarget.classList.contains('enter-active')) return;
+
+    this.hang(menuRect, menuOffsetHeight)
+  }
+
+  hang (menuRect: DOMRect, menuOffsetHeight: number): void {
     if (menuRect.left < 0) {
       this.hangLeft()
     }
@@ -43,18 +50,21 @@ export default class extends Controller {
   }
 
   hangLeft (): void {
-    this.menuTarget.classList.add('left-0')
-    this.menuTarget.classList.remove('right-0')
+    this.menuTarget.style.left = '0px'
+    this.menuTarget.style.right = 'auto'
   }
+
   hangRight (): void {
-    this.menuTarget.classList.add('right-0')
-    this.menuTarget.classList.remove('left-0')
+    this.menuTarget.style.right = '0px'
+    this.menuTarget.style.left = 'auto'
   }
+
   hangBottom (buttonHeight: number): void {
-    this.menuTarget.style.bottom = `${buttonHeight + 10}px`;
+    this.menuTarget.style.bottom = `${buttonHeight + 10}px`
   }
+
   hangTop (buttonHeight: number): void {
-    this.menuTarget.style.top = `${buttonHeight + 10}px`;
+    this.menuTarget.style.top = `${buttonHeight + 10}px`
   }
 
   hide (event: Event): void {
