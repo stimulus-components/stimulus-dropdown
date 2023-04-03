@@ -17,17 +17,17 @@ export default class extends Controller {
   }
 
   toggle ({
-    target
+    target: button
   }: {
     target: HTMLInputElement
   }): void {
     this.toggleTransition()
-    this.updateMenuPosition(target)
+    this.updateMenuPosition(button)
   }
 
-  updateMenuPosition (target: HTMLInputElement): void {
+  updateMenuPosition (button: HTMLInputElement): void {
     const menuRect = this.menuTarget.getBoundingClientRect()
-    const buttonRect = target.getBoundingClientRect()
+    const buttonRect = button.getBoundingClientRect()
 
     if(!this.menuTarget.classList.contains('enter-active')) return;
 
@@ -36,10 +36,10 @@ export default class extends Controller {
       return;
     };
 
-    this.hang(menuRect, target.offsetHeight)
+    this.hang(menuRect, button.offsetHeight)
   }
 
-  hang (menuRect: DOMRect, menuOffsetHeight: number): void {
+  hang (menuRect: DOMRect, buttonOffsetHeight: number): void {
     if (menuRect.left < 0) {
       this.hangLeft()
     }
@@ -48,10 +48,10 @@ export default class extends Controller {
     }
 
     if (menuRect.top < 0) {
-      this.hangTop(menuOffsetHeight)
+      this.hangTop(buttonOffsetHeight)
     }
     else if (menuRect.bottom > window.innerHeight) {
-      this.hangBottom(menuOffsetHeight)
+      this.hangBottom(buttonOffsetHeight)
     }
   }
 
