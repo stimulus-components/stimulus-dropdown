@@ -11,7 +11,7 @@ export default class extends Controller {
 
   connect (): void {
     useTransition(this, {
-      element: this.menuTarget
+      element: this.menuTarget,
     })
   }
 
