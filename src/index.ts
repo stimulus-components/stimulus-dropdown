@@ -1,27 +1,27 @@
-import { Controller } from '@hotwired/stimulus'
-import { useTransition } from 'stimulus-use'
+import { Controller } from "@hotwired/stimulus"
+import { useTransition } from "stimulus-use"
 
-export default class extends Controller {
+export default class Dropdown extends Controller {
   menuTarget: HTMLElement
   toggleTransition: (event?: Event) => void
   leave: (event?: Event) => void
   transitioned: false
 
-  static targets = ['menu']
+  static targets = ["menu"]
 
-  connect (): void {
+  connect(): void {
     useTransition(this, {
       element: this.menuTarget,
     })
   }
 
-  toggle (): void {
+  toggle(): void {
     this.toggleTransition()
   }
 
-  hide (event: Event): void {
+  hide(event: Event): void {
     // @ts-ignore
-    if (!this.element.contains(event.target) && !this.menuTarget.classList.contains('hidden')) {
+    if (!this.element.contains(event.target) && !this.menuTarget.classList.contains("hidden")) {
       this.leave()
     }
   }
